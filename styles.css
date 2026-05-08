@@ -166,14 +166,14 @@ footer p {
     justify-content: center;
     align-items: stretch;
     gap: clamp(18px, 4vw, 36px);
-    flex-wrap: nowrap;
-    max-width: 880px;
+    flex-wrap: wrap;
+    max-width: 1080px;
     margin: 0 auto;
 }
 
 .polaroid {
-    flex: 1 1 0;
-    max-width: 390px;
+    flex: 1 1 280px;
+    max-width: 330px;
     min-width: 0;
     margin: 0;
     padding: 12px 12px 20px;
@@ -191,7 +191,8 @@ footer p {
 
 .polaroid img {
     aspect-ratio: 4 / 3;
-    object-fit: cover;
+    object-fit: contain;
+    background: var(--paper);
     border-radius: 6px;
 }
 
