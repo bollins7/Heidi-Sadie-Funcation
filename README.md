@@ -1,5 +1,16 @@
-# Heidi-s-Funcation
+# Heidi-Sadie-Funcation
 
-Updates have been made to this 1.28.25. Completely revamped with HTML and inline-CSS.
+A modern little website for Heidi and Sadie with a visitor survey backed by SQLite.
 
-Next will be to come back and add a little more CSS to give it more character.
+## Run locally
+
+```bash
+npm install
+npm start
+```
+
+Then open `http://localhost:3000`.
+
+## Survey backend
+
+Survey submissions are posted to `POST /api/survey` and stored in a local SQLite database named `survey-responses.db`. You can read saved responses from `GET /api/survey`.
