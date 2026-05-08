@@ -3,80 +3,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Heidi & Sadie's Doghouse</title>
+    <title>Heidi & Sadie's Funcation</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="scrapbook">
-        <h1>Welcome to Heidi & Sadie's Doghouse</h1>
+    <header class="site-hero">
+        <nav class="site-nav" aria-label="Main navigation">
+            <a href="#about">About</a>
+            <a href="#memories">Memories</a>
+            <a href="#survey">Survey</a>
+        </nav>
 
-        <div class="page-curl">
-            <h2>About Heidi</h2>
-            <p>Heidi is a sweet little pot-belly pig 🐷</p>
+        <div class="hero-content">
+            <p class="eyebrow">Heidi & Sadie's corner of the internet</p>
+            <h1>Welcome to the Funcation</h1>
+            <p class="hero-copy">A bright little scrapbook for two big personalities, plenty of stories, and a few strong opinions.</p>
         </div>
+    </header>
 
-        <div class="page-curl">
-            <h2>About Sadie</h2>
-            <p>Sadie is full of energy and always ready to piss me off 🐶</p>
-        </div>
+    <main>
+        <section class="intro-grid" id="about" aria-label="About Heidi and Sadie">
+            <article class="profile-card heidi-card">
+                <span class="profile-label">Heidi</span>
+                <h2>Sweet, snack-focused, and impossible not to love.</h2>
+                <p>Heidi is a sweet little pot-belly pig who brings charm, curiosity, and a healthy appreciation for crayons.</p>
+            </article>
 
-        <div>
-            <h2>Photo Memories</h2>
+            <article class="profile-card sadie-card">
+                <span class="profile-label">Sadie</span>
+                <h2>Playful, energetic, and always ready for the next moment.</h2>
+                <p>Sadie is full of energy, loves her reindeer, and keeps every day from getting boring.</p>
+            </article>
+        </section>
+
+        <section class="memories-section" id="memories" aria-labelledby="memories-title">
+            <div class="section-heading">
+                <p class="eyebrow">Photo memories</p>
+                <h2 id="memories-title">Two favorites, side by side.</h2>
+            </div>
+
             <div class="photo-gallery">
-                <div class="polaroid">
-                    <img src="heidi-photo.jpg" alt="Heidi">
-                    <p>Heidi, always smiling! ❤️</p>
+                <figure class="polaroid">
+                    <img src="heidi-photo.jpg" alt="Heidi smiling">
+                    <figcaption>Heidi, always smiling!</figcaption>
+                </figure>
+                <figure class="polaroid">
+                    <img src="sadie-photo.jpg" alt="Sadie enjoying an adventure">
+                    <figcaption>Sadie, our little adventurer!</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section class="story-section" aria-labelledby="story-title">
+            <div class="section-heading">
+                <p class="eyebrow">Their adventures</p>
+                <h2 id="story-title">Small moments, big memories.</h2>
+            </div>
+
+            <div class="story-grid">
+                <article class="story-step">
+                    <img src="meeting.jpg" alt="Heidi and Sadie's meeting day">
+                    <div>
+                        <h3>Meeting Day</h3>
+                        <p>Heidi and Sadie met in 2021 and immediately started writing their own little history.</p>
+                    </div>
+                </article>
+                <article class="story-step">
+                    <img src="park.jpg" alt="Heidi and Sadie playing outside">
+                    <div>
+                        <h3>Park Days</h3>
+                        <p>They love getting outside, exploring, and making ordinary afternoons feel eventful.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="survey-section" id="survey" aria-labelledby="survey-title">
+            <div class="survey-copy">
+                <p class="eyebrow">Visitor survey</p>
+                <h2 id="survey-title">What do you think about Heidi and Sadie?</h2>
+                <p>Share a quick take on their personalities, behavior, and overall star power.</p>
+            </div>
+
+            <form class="survey-form" id="surveyForm">
+                <label for="visitorName">Your name</label>
+                <input type="text" id="visitorName" name="visitorName" placeholder="Optional">
+
+                <label for="favoriteFriend">Who are you voting for today?</label>
+                <select id="favoriteFriend" name="favoriteFriend" required>
+                    <option value="">Choose one</option>
+                    <option value="Heidi">Heidi</option>
+                    <option value="Sadie">Sadie</option>
+                    <option value="Both">Both, obviously</option>
+                </select>
+
+                <label for="personality">Which personality trait stands out most?</label>
+                <select id="personality" name="personality" required>
+                    <option value="">Choose one</option>
+                    <option value="Sweet">Sweet</option>
+                    <option value="Curious">Curious</option>
+                    <option value="Chaotic">Chaotic</option>
+                    <option value="Loyal">Loyal</option>
+                    <option value="Playful">Playful</option>
+                </select>
+
+                <label for="behavior">How would you describe their behavior?</label>
+                <select id="behavior" name="behavior" required>
+                    <option value="">Choose one</option>
+                    <option value="Angel energy">Angel energy</option>
+                    <option value="Mostly well behaved">Mostly well behaved</option>
+                    <option value="A little mischievous">A little mischievous</option>
+                    <option value="Total handful">Total handful</option>
+                </select>
+
+                <label for="rating">Overall rating</label>
+                <input type="range" id="rating" name="rating" min="1" max="5" value="5">
+                <div class="rating-row" aria-hidden="true">
+                    <span>1</span>
+                    <strong id="ratingValue">5</strong>
+                    <span>5</span>
                 </div>
-                <div class="polaroid">
-                    <img src="sadie-photo.jpg" alt="Sadie">
-                    <p>Sadie, our little adventurer! 🐾</p>
-                </div>
-            </div>
-        </div>
 
-        <div class="page-curl">
-            <h2>Their Favorite Things</h2>
-            <div>
-                <p>Heidi loves eating crayons 🖍️</p>
-                <p>Sadie loves her reindeer 🐴</p>
-            </div>
-        </div>
+                <label for="story">Anything else we should know?</label>
+                <textarea id="story" name="story" rows="4" placeholder="Tell us your favorite observation..."></textarea>
 
-        <!-- Storytelling Section -->
-        <div class="story">
-            <h2>Their Adventures</h2>
-            <div class="story-step">
-                <p>Heidi and Sadie met in 2021...</p>
-                <img src="meeting.jpg" alt="Meeting Day">
-            </div>
-            <div class="story-step">
-                <p>They love playing in the park...</p>
-                <img src="park.jpg" alt="Park Day">
-            </div>
-        </div>
-    </div>
+                <button type="submit">Send survey</button>
+                <p class="form-status" id="formStatus" role="status"></p>
+            </form>
+        </section>
+    </main>
 
-    <!-- Footer -->
     <footer>
-        <p>Follow Heidi & Sadie's adventures!</p>
-        <div class="social-links">
-            <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
-            <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
-        </div>
-        <p>Made with love for Heidi & Sadie ❤️</p>
+        <p>Made with love for Heidi & Sadie.</p>
     </footer>
 
-    <!-- Sound Effects -->
     <audio id="heidiSound" src="oink.mp3"></audio>
     <audio id="sadieSound" src="bark.mp3"></audio>
-    <script>
-        // Play sound effects on hover
-        document.querySelector('.polaroid:nth-child(1)').addEventListener('mouseover', () => {
-            document.getElementById('heidiSound').play();
-        });
-        document.querySelector('.polaroid:nth-child(2)').addEventListener('mouseover', () => {
-            document.getElementById('sadieSound').play();
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
